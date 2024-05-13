@@ -1,10 +1,18 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MaterialApp(
-    home: Home(),
-    debugShowCheckedModeBanner: false,
-  ));
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Home(),
+    );
+  }
 }
 
 class Home extends StatelessWidget {
@@ -14,7 +22,7 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Tic Tac Toe"),
+        title: Text("Tic Tac Toe"),
       ),
     );
   }
